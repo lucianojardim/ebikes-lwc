@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '3.23.0'
+project:
+    name: ebikes-lwc
+    package:
+        name: ebikes-lwc
+        api_version: '50.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/ebikes-lwc/tests
+            options:
+                outputdir: robot/ebikes-lwc/results
+
+    robot_testdoc:
+        options:
+            path: robot/ebikes-lwc/tests
+            output: robot/ebikes-lwc/doc/ebikes-lwc_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
