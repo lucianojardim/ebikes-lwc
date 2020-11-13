@@ -1,24 +1,28 @@
 {
-  "orgName": "ebikes-lwc - Dev Org",
-  "edition": "Developer",
-  "settings": {
-    "lightningExperienceSettings": {
-      "enableS1DesktopEnabled": true
-    },
-    "chatterSettings": {
-      "enableChatter": true
-    },
-    "userManagementSettings": {
-      "enableNewProfileUI": true
-    },
-    "securitySettings": {
-      "enableAdminLoginAsAnyUser": true,
-      "sessionSettings": {
-        "forceRelogin": false
-      }
-    },
-    "languageSettings": {
-      "enableTranslationWorkbench": true
+    "orgName": "ebikes-lwc - Dev Org",
+    "edition": "Developer",
+    "hasSampleData": false,
+    "features": ["Communities", "Walkthroughs"],
+    "settings": {
+        "communitiesSettings": {
+            "enableNetworksEnabled": true
+        },
+        "experienceBundleSettings": {
+            "enableExperienceBundleMetadata": true
+        },
+        "lightningExperienceSettings": {
+            "enableS1DesktopEnabled": true
+        },
+        "securitySettings": {
+            "passwordPolicies": {
+                "enableSetPasswordInApi": true
+            }
+        },
+        "mobileSettings": {
+            "enableS1EncryptedStoragePref2": false
+        },
+        "userEngagementSettings": {
+            "enableOrchestrationInSandbox": true
+        }
     }
-  }
 }
