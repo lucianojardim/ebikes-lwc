@@ -22,3 +22,46 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 75
+
+flows:
+    config_dev:
+        steps:
+            3:
+                task: load_dataset
+            4:
+                task: assign_permission_sets
+                options:
+                    api_names: 'ebikes,Walkthroughs'
+            5:
+                task: dx
+                description: Deploy community menu options
+                options:
+                    command: 'force:mdapi:deploy -d mdapiDeploy/unpackaged -w 5'
+            6:
+                task: util_sleep
+                options:
+                    seconds: 120
+            7:
+                task: publish_community
+                options:
+                    name: E-Bikes
+    config_qa:
+        steps:
+            3:
+                task: load_dataset
+            4:
+                task: assign_permission_sets
+                options:
+                    api_names: 'ebikes,Walkthroughs'
+            5:
+                task: dx
+                options:
+                    command: 'force:mdapi:deploy -d mdapiDeploy/unpackaged -w 5'
+            6:
+                task: util_sleep
+                options:
+                    seconds: 120
+            7:
+                task: publish_community
+                options:
+                    name: E-Bikes
