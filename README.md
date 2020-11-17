@@ -14,3 +14,7 @@ This is a POC to get experience with scratch orgs.
 6. Look for bike in the Org's App Launcher.
 
 NOTE: The Salesforce code here was copied from https://github.com/trailheadapps/ebikes-lwc
+
+## To import this repo as a dependency (using cumulusCI)
+
+First create a src folder, with a package.xml declaring the content using "sfdx force:source:convert -r ./force-app/ -d src"
